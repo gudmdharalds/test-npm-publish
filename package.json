@@ -1,0 +1,23 @@
+{
+  "name": "@gudmdharalds/test-npm-publish",
+  "version": "1.0.",
+  "description": "test-npm-publish",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gudmdharalds/test-npm-publish.git"
+  },
+  "author": "gudmdharalds",
+  "contributors": [
+    "Guðmundur Haraldsson <test@test.is>"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.11.0",
+    "npm": ">=8"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  },
+}
