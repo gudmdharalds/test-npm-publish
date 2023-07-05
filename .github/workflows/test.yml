@@ -22,4 +22,4 @@ jobs:
       - name: Step 1
         run: gh issue list
         env:
-           GH_TOKEN: ${{ vars.GH_TESTS_TOKEN }}
+           GH_TOKEN: ${{ secrets.GH_TESTS_TOKEN }}
