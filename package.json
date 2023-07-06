@@ -1,6 +1,6 @@
 {
   "name": "@automattic/vip",
-  "version": "1.0.5",
+  "version": "v1.0.8-dev.0",
   "description": "test-npm-publish",
   "main": "index.js",
   "repository": {
