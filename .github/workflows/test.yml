@@ -24,6 +24,8 @@ jobs:
 
       - name: Create label
         run: gh label create '[ Type ] NPM version update' --color '#C2E0C6'
+        env:
+           GH_TOKEN: ${{ secrets.GH_TESTS_TOKEN }}
 
       - name: Step 1
         run: gh pr create --base trunk --head test2 --title "New release" --body $'## Description \n\n<p>This pull request updates the npm package version number and should be auto-merged.</p>' --label '[ Type ] NPM version update' -a @me
