@@ -22,9 +22,6 @@ jobs:
       - name: Check out the source code
         uses: actions/checkout@v3
 
-      - name: Checkout test
-        run: git checkout -b test2
-
       - name: Step 1
         run: gh pr create --base trunk --head test2 --title "New release" --body "## Description \n\n<p>This pull request updates the npm package version number and should be auto-merged.</p>" --label '[ Type ] NPM version update' -a @me
         env:
