@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Create label
-        run: gh label list --search '[ Type ] NPM version update' | wc -l
+        run: gh label list --search '[ Type ] NPM version update' ; echo $?
         env:
            GH_TOKEN: ${{ secrets.GH_TESTS_TOKEN }}
            
@@ -34,7 +34,7 @@ jobs:
 
 
       - name: Create label
-        run: gh label list --search '[ Type ] NPM version update' | wc -l
+        run: gh label list --search '[ Type ] NPM version update' ; echo $?
         env:
            GH_TOKEN: ${{ secrets.GH_TESTS_TOKEN }}
 
