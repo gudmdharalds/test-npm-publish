@@ -1,11 +1,11 @@
 {
-  "name": "@gudmdharalds/test-npm-publish",
-  "version": "1.0.",
+  "name": "@automattic/vip",
+  "version": "1.0.3",
   "description": "test-npm-publish",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gudmdharalds/test-npm-publish.git"
+    "url": "git+https://github.com/automattic/vip.git"
   },
   "author": "gudmdharalds",
   "contributors": [
