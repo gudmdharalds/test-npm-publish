@@ -19,7 +19,8 @@ jobs:
     name: Publish to npm
     runs-on: ubuntu-latest
     steps:
-      - uses: Automattic/vip-actions/npm-publish@v0.1.1
+      - uses: Automattic/vip-actions/npm-publish@update/branch-protection-compatibility
         with:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           npm-version-type: ${{ inputs.npm-version-type }}
+          GH_TOKEN: ${ secrets.GH_TESTS_TOKEN }}
