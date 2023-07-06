@@ -1,18 +1,8 @@
 ---
-name: npm publish
+name: Pull request is merged
 on:
-  workflow_dispatch:
-    inputs:
-      # This is copied from npm-publish/action.yml
-      npm-version-type:
-        description: 'The npm version type we are publishing.'
-        required: true
-        type: choice
-        default: 'patch'
-        options:
-          - patch
-          - minor
-          - major
+  pull_request:
+    types: [opened, reopened]
 
 jobs:
   publish:
@@ -22,5 +12,5 @@ jobs:
       - uses: Automattic/vip-actions/npm-publish@update/branch-protection-compatibility
         with:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          npm-version-type: ${{ inputs.npm-version-type }}
-          GH_TOKEN: ${ secrets.GH_TESTS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TESTS_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
