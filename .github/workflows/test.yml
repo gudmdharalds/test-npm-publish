@@ -22,6 +22,9 @@ jobs:
       - name: Check out the source code
         uses: actions/checkout@v3
 
+      - name: Create label
+        run: gh label create '[ Type ] NPM version update' --color '#C2E0C6'
+
       - name: Step 1
         run: gh pr create --base trunk --head test2 --title "New release" --body $'## Description \n\n<p>This pull request updates the npm package version number and should be auto-merged.</p>' --label '[ Type ] NPM version update' -a @me
         env:
