@@ -1,8 +1,8 @@
 ---
-name: Pull request is merged
+name: Pull request is merged and a new version is published
 on:
-  check_run:
-    types: [completed]
+  pull_request:
+    types: [opened, reopened]
 
 jobs:
   publish:
