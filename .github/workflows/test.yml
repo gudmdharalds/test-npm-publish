@@ -22,23 +22,9 @@ jobs:
       - name: Check out the source code
         uses: actions/checkout@v3
 
-      - name: Create label
-        run: gh label list --search '[ Type ] NPM version update' | wc -l
+      - name: Run npm-prepare-release
+      - uses: Automattic/vip-actions/npm-prepare-release@update/branch-protection-compatibility
         env:
-           GH_TOKEN: ${{ secrets.GH_TESTS_TOKEN }}
-           
-      - name: Create label
-        run: gh label create '[ Type ] NPM version update' --color '#C2E0C6'
-        env:
-           GH_TOKEN: ${{ secrets.GH_TESTS_TOKEN }}
-
-
-      - name: Create label
-        run: gh label list --search '[ Type ] NPM version update' ; echo $?
-        env:
-           GH_TOKEN: ${{ secrets.GH_TESTS_TOKEN }}
-
-      - name: Step 1
-        run: gh pr create --base trunk --head test2 --title "New release" --body $'## Description \n\n<p>This pull request updates the npm package version number and should be auto-merged.</p>' --label '[ Type ] NPM version update' -a @me
-        env:
-           GH_TOKEN: ${{ secrets.GH_TESTS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TESTS_TOKEN }}
+          npm-version-type: ${{ inputs.npm-version-type }}
+        
