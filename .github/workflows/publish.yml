@@ -1,8 +1,8 @@
 ---
 name: Publish new version (if applicable)
 on:
-  check_suite:
-    types: [completed]
+  check_run:
+    types: [rerequested, completed]
 
 jobs:
   publish:
