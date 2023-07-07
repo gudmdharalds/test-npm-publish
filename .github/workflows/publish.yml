@@ -4,7 +4,7 @@ on:
   status
     
 jobs:
-  if_success:
+  if_successful:
     name: Publish to npm
     runs-on: ubuntu-latest
     #if: contains( github.event.pull_request.labels.*.name, '[ Type ] NPM version update' )
