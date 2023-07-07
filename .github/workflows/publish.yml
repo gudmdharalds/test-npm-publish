@@ -1,17 +1,16 @@
 ---
-name: Publish new version (if applicable)
+name: Publish to npm (if applicable)
 on:
-  status
-    
+  pull_request:
+    types: [opened]
+
 jobs:
-  if_successful:
+  publish:
     name: Publish to npm
     runs-on: ubuntu-latest
-    #if: contains( github.event.pull_request.labels.*.name, '[ Type ] NPM version update' )
-    #if: github.event.state == 'success'
+    if: contains( github.event.pull_request.labels.*.name, '[ Type ] NPM version update' )
     steps:
       - uses: Automattic/vip-actions/npm-publish@update/branch-protection-compatibility
         with:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_TESTS_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
