@@ -1,14 +1,15 @@
 ---
 name: Publish new version (if applicable)
 on:
-  check_run:
-    types: [rerequested, completed]
-
+  status
+    
 jobs:
-  publish:
+  if_error_or_failure:
     name: Publish to npm
     runs-on: ubuntu-latest
     #if: contains( github.event.pull_request.labels.*.name, '[ Type ] NPM version update' )
+    if: >-
+      github.event.state == 'success' && contains( github.event.pull_request.labels.*.name, '[ Type ] NPM version update' )
     steps:
       - uses: Automattic/vip-actions/npm-publish@update/branch-protection-compatibility
         with:
