@@ -1,8 +1,8 @@
 ---
 name: Publish new version (if applicable)
 on:
-  pull_request:
-    types: [opened, reopened]
+  check_suite:
+    types: [completed]
 
 jobs:
   publish:
