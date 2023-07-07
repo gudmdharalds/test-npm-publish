@@ -1,6 +1,6 @@
 {
   "name": "@automattic/vip",
-  "version": "1.0.22",
+  "version": "1.0.23-dev.0",
   "description": "test-npm-publish",
   "main": "index.js",
   "repository": {
@@ -16,8 +16,6 @@
     "node": ">=16.11.0",
     "npm": ">=8"
   },
-  "devDependencies": {
-  },
-  "dependencies": {
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }
