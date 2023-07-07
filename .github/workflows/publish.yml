@@ -1,5 +1,5 @@
 ---
-name: Pull request is merged and a new version is published
+name: Publish new version (if applicable)
 on:
   pull_request:
     types: [opened, reopened]
