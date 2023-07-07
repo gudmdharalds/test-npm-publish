@@ -1,5 +1,5 @@
 ---
-name: test stuff
+name: Prepare new release
 on:
   workflow_dispatch:
     inputs:
