@@ -13,7 +13,7 @@ jobs:
       contents: write
       pull-requests: write    
     steps:
-      - uses: Automattic/vip-actions/npm-publish@update/branch-protection-compatibility
+      - uses: Automattic/vip-actions/npm-publish@update/npm-publish-branch-protection-compatibility
         with:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: 'abc'
