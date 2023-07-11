@@ -2,13 +2,13 @@
 name: Publish to npm (if applicable)
 on:
   pull_request:
-    types: [opened]
+    types: [closed]
 
 jobs:
   publish:
     name: Publish to npm
     runs-on: ubuntu-latest
-    if: contains( github.event.pull_request.labels.*.name, '[ Type ] NPM version update' )
+    if: contains( github.event.pull_request.labels.*.name, '[ Type ] NPM version update' ) && github.event.pull_request.merged == true
     steps:
       - uses: Automattic/vip-actions/npm-publish@update/branch-protection-compatibility
         with:
