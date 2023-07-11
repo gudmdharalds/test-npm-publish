@@ -16,5 +16,4 @@ jobs:
       - uses: Automattic/vip-actions/npm-publish@update/branch-protection-compatibility
         with:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          PR_ASSIGNEE: ${{ github.actor }}
+          NPM_TOKEN: 'abc'
