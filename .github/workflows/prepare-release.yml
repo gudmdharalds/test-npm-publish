@@ -18,6 +18,9 @@ jobs:
   testing123:
     name: Test stuff
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write      
     steps:    
       - name: Check out the source code
         uses: actions/checkout@v3
