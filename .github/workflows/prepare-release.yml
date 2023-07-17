@@ -25,6 +25,6 @@ jobs:
       - name: Run npm-prepare-release
         uses: Automattic/vip-actions/npm-prepare-release@update/npm-publish-branch-protection-compatibility
         with:
-          GH_TOKEN: ${{ secrets.GH_TESTS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           npm-version-type: ${{ inputs.npm-version-type }}
         
