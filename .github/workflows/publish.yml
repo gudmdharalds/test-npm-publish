@@ -16,4 +16,4 @@ jobs:
       - uses: Automattic/vip-actions/npm-publish@update/npm-publish-branch-protection-compatibility
         with:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: 'abc'
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
