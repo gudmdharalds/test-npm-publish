@@ -1,6 +1,6 @@
 {
   "name": "@gudmdharalds/test-npm-publish",
-  "version": "0.0.14-dev.0",
+  "version": "0.0.14",
   "description": "Test package",
   "main": "index.js",
   "scripts": {
