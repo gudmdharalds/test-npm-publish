@@ -44,4 +44,4 @@ jobs:
           PR_DESCRIPTION: ${{ inputs.description }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr create --base "$PR_BASE_BRANCH" --head "$PR_HEAD_BRANCH" --body "$PR_TITLE" --body "$PR_DESCRIPTION" 
+          gh pr create --base "$PR_BASE_BRANCH" --head "$PR_HEAD_BRANCH" --title "$PR_TITLE" --body "$PR_DESCRIPTION" 
